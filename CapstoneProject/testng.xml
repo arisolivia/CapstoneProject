@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Suite">
+
+  <test thread-count="5" name="ChromeTest">
+  	<parameter name="browser" value="chrome"></parameter>
+  	<parameter name="url" value="http://10.82.180.36/Common/Login.aspx"></parameter>
+    <classes>
+      <!-- <class name="testcases.LoginPageTest"/> -->
+      <class name="testcases.CalculatorPageTest"/>
+      <class name="testcases.CloseAccountPageTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+    <test thread-count="5" name="EdgeTest">
+  	<parameter name="browser" value="edge"></parameter>
+  	<parameter name="url" value="http://10.82.180.36/Common/Login.aspx"></parameter>
+    <classes>
+      <class name="testcases.LoginPageTest"/>
+      <class name="testcases.CalculatorPageTest"/>
+      <class name="testcases.CloseAccountPageTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+    <!--<test thread-count="5" name="IETest">
+  	<parameter name="browser" value="ie"></parameter>
+  	<parameter name="url" value="http://10.82.180.36/Common/Login.aspx"></parameter>
+    <classes>
+      <class name="testcases.LoginPageTest"/>
+      <class name="testcases.CalculatorPageTest"/>
+      <class name="testcases.CloseAccountPageTest"/>
+    </classes>
+  </test>  Test -->
+  
+</suite> <!-- Suite -->

@@ -1,0 +1,14 @@
+log4j.rootCategory = INFO, console, file
+
+log4j.appender.console = org.apache.log4j.ConsoleAppender
+
+log4j.appender.file = org.apache.log4j.RollingFileAppender
+log4j.appender.file.File = .\\Logs\\AppLogs.log
+
+log4j.appender.console.layout = org.apache.log4j.LayoutPattern
+log4j.appender.console.layout.ConversionPattern = %d{MM-dd-yyyy HH:mm:nn} %F %-5p [%t] %c{2} %L - %m%n
+
+log4j.appender.file.MaxFileSize = 5KB
+log4j.appender.file.MaxBackupIndex = 2
+log4j.appender.file.layout = org.apache.log4j.LayoutPattern
+log4j.appender.file.layout.ConversionPattern = %d{ISO8601} %5p %F [%t] %c{1}: %L - %m%n
